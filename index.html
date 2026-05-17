@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Discover Your Guardian Angel</title>
+  <title>Descubre a Tu Ángel Guardián</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <!-- Vturb preload for faster video -->
   <link rel="preload" href="https://scripts.converteai.net/f8e465b5-f483-4d08-be19-bc14de388e59/players/69c2dfafbaa02a41bc514ff3/v4/embed.html">
@@ -18,16 +18,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { -webkit-text-size-adjust: 100%; }
-
     body {
       font-family: 'Lato', sans-serif;
       min-height: 100vh;
       color: #fff;
       overflow-x: hidden;
     }
-
     /* ══════════════════════════════
-       SCREEN 1 — Landing (blue)
+       PANTALLA 1 — Landing (azul)
     ══════════════════════════════ */
     #screen-landing {
       background: linear-gradient(170deg, #1e3580 0%, #2d55b8 35%, #1e3d96 65%, #152d70 100%);
@@ -44,7 +42,6 @@
       pointer-events: none;
       z-index: 0;
     }
-
     .landing-inner {
       position: relative;
       z-index: 1;
@@ -52,7 +49,6 @@
       margin: 0 auto;
       padding: 0 24px;
     }
-
     /* hero */
     .hero {
       display: flex;
@@ -85,7 +81,6 @@
       color: #fff;
     }
     .hero h1 .golden { color: #f5a623; }
-
     .painting {
       width: 100%;
       max-width: clamp(300px, 45vw, 460px);
@@ -116,7 +111,6 @@
       0%,100% { transform: translateY(0); }
       50%      { transform: translateY(-10px); }
     }
-
     .divider {
       display: flex;
       align-items: center;
@@ -130,7 +124,6 @@
       height: 1px;
       background: linear-gradient(to right, transparent, rgba(245,166,35,0.55), transparent);
     }
-
     .question {
       font-size: clamp(16px, 2.2vw, 22px);
       font-weight: 700;
@@ -148,7 +141,6 @@
       max-width: 480px;
       text-align: center;
     }
-
     /* discover */
     .discover {
       padding: 8px 0 36px;
@@ -187,7 +179,6 @@
       transition: background 0.2s, transform 0.2s;
     }
     .card:hover { background: rgba(255,255,255,0.13); transform: translateY(-3px); }
-
     /* cta */
     .cta-section {
       padding: 4px 0 64px;
@@ -245,9 +236,8 @@
       width: 100%;
       max-width: 520px;
     }
-
     /* ══════════════════════════════
-       SCREEN 2 — Quiz (beige)
+       PANTALLA 2 — Quiz (beige)
     ══════════════════════════════ */
     #screen-quiz {
       display: none;
@@ -260,7 +250,6 @@
     #screen-quiz.active {
       display: flex;
     }
-
     .quiz-wrap {
       width: 100%;
       max-width: 560px;
@@ -365,7 +354,6 @@
     }
     .quiz-btn.ready:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,53,128,0.45); }
     .quiz-btn:active { transform: scale(0.98); }
-
     /* area options */
     .area-list {
       display: flex;
@@ -391,7 +379,6 @@
       background: #1e3580;
       color: #fff;
     }
-
     .reveal-btn {
       display: block;
       width: 100%;
@@ -411,18 +398,15 @@
     }
     .reveal-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,168,0,0.45); }
     .reveal-btn:active { transform: scale(0.98); }
-
     .secure-note {
       font-size: 12px;
       color: #aaa;
       text-align: center;
       margin-bottom: 20px;
     }
-
     /* steps */
     .step { display: none; }
     .step.active { display: block; }
-
     /* loader */
     .loader-ring {
       width: 72px; height: 72px;
@@ -440,7 +424,6 @@
       font-style: italic;
       transition: opacity 0.4s;
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -449,150 +432,132 @@
   </style>
 </head>
 <body>
-
   <!-- ══════════════════════════════
-       SCREEN 1 — Landing
+       PANTALLA 1 — Landing
   ══════════════════════════════ -->
   <div id="screen-landing">
     <div class="landing-inner">
-
       <section class="hero fade-in">
-        <div class="badge">✦ Spiritual Revelation</div>
-        <h1>Discover Your<br><span class="golden">Guardian Angel's</span><br>Name and the<br>Message He Has For You</h1>
-        <div class="painting"><img src="anjo.jpg" alt="Guardian Angel" style="width:100%;height:100%;object-fit:cover;border-radius:4px;" /></div>
+        <div class="badge">✦ Revelación Espiritual</div>
+        <h1>Descubre el Nombre de Tu<br><span class="golden">Ángel Guardián</span><br>y el Mensaje<br>que Tiene Para Ti</h1>
+        <div class="painting"><img src="anjo.jpg" alt="Ángel Guardián" style="width:100%;height:100%;object-fit:cover;border-radius:4px;" /></div>
         <div class="divider"><div class="divider-line"></div><div class="divider-line"></div></div>
-        <p class="question">Do you feel something protecting you,<br>but still don't know what it is?</p>
-        <p class="subtitle">Maybe it's no coincidence you're reading this now.</p>
+        <p class="question">¿Sientes que algo te protege,<br>pero aún no sabes qué es?</p>
+        <p class="subtitle">Tal vez no sea casualidad que estés leyendo esto ahora.</p>
       </section>
-
       <section class="discover fade-in">
         <div class="divider"><div class="divider-line"></div><span style="font-size:22px">👼</span><div class="divider-line"></div></div>
-        <h2>Based on your birth date, you can discover:</h2>
+        <h2>Basado en tu fecha de nacimiento, puedes descubrir:</h2>
         <div class="cards">
-          <div class="card">👼 Your Guardian Angel's name</div>
-          <div class="card">✨ The spiritual mission he fulfills by your side</div>
-          <div class="card">🌟 Personalized guidance from the celestial plan for your life</div>
-          <div class="card">🪶 And a special message that can change the course of your next days</div>
+          <div class="card">👼 El nombre de tu Ángel Guardián</div>
+          <div class="card">✨ La misión espiritual que cumple a tu lado</div>
+          <div class="card">🌟 Guía personalizada del plan celestial para tu vida</div>
+          <div class="card">🪶 Y un mensaje especial que puede cambiar el rumbo de tus próximos días</div>
         </div>
       </section>
-
       <section class="cta-section fade-in">
         <div class="divider"><div class="divider-line"></div><span style="font-size:22px">✨</span><div class="divider-line"></div></div>
-        <div class="revelation-box">This revelation is unique and individual,<br>guided by an ancient spiritual system<br>used for centuries.</div>
-        <p class="cta-label">👉 Touch to begin your journey now:</p>
-        <button class="cta-btn" id="btn-start">Begin My Journey Now</button>
-        <div class="social-proof">🏆 Over 50,000 people discovered</div>
+        <div class="revelation-box">Esta revelación es única e individual,<br>guiada por un antiguo sistema espiritual<br>utilizado durante siglos.</div>
+        <p class="cta-label">👉 Toca para comenzar tu viaje ahora:</p>
+        <button class="cta-btn" id="btn-start">Comenzar Mi Viaje Ahora</button>
+        <div class="social-proof">🏆 Más de 50.000 personas ya lo descubrieron</div>
       </section>
-
     </div>
   </div>
-
   <!-- ══════════════════════════════
-       SCREEN 2 — Quiz
+       PANTALLA 2 — Quiz
   ══════════════════════════════ -->
   <div id="screen-quiz">
     <div class="quiz-wrap">
-
       <div class="progress-header">
-        <span id="step-label">Step 1 of 3</span>
+        <span id="step-label">Paso 1 de 3</span>
         <span class="progress-pct" id="step-pct">33%</span>
       </div>
       <div class="progress-track">
         <div class="progress-fill" id="progress-fill" style="width: 33%"></div>
       </div>
-
       <div class="quiz-card">
-
-        <!-- Step 1: Birth date -->
+        <!-- Paso 1: Fecha de nacimiento -->
         <div class="step active fade-in" id="step-1">
-          <h2 class="quiz-title">When were you born?</h2>
-          <p class="quiz-sub">Your date reveals which Angel guides you</p>
-          <input id="date-input" class="quiz-input" type="text" placeholder="MM/DD/YYYY" maxlength="10" inputmode="numeric" />
-          <p class="input-hint" id="date-hint">🔔 Enter numbers only: month, day and year</p>
-          <button class="quiz-btn" id="btn-step1">Continue</button>
+          <h2 class="quiz-title">¿Cuándo naciste?</h2>
+          <p class="quiz-sub">Tu fecha revela qué Ángel te guía</p>
+          <input id="date-input" class="quiz-input" type="text" placeholder="MM/DD/AAAA" maxlength="10" inputmode="numeric" />
+          <p class="input-hint" id="date-hint">🔔 Ingresa solo números: mes, día y año</p>
+          <button class="quiz-btn" id="btn-step1">Continuar</button>
         </div>
-
-        <!-- Step 2: Area selection -->
+        <!-- Paso 2: Selección de área -->
         <div class="step fade-in" id="step-2">
-          <h2 class="quiz-title">Which area needs guidance?</h2>
-          <p class="quiz-sub">Choose where you seek clarity and protection</p>
-          <p class="input-hint">💡 You can select as many areas as you want</p>
+          <h2 class="quiz-title">¿Qué área necesita orientación?</h2>
+          <p class="quiz-sub">Elige dónde buscas claridad y protección</p>
+          <p class="input-hint">💡 Puedes seleccionar todas las áreas que quieras</p>
           <div class="area-list">
-            <div class="area-option" data-area="health">🌿 Health &amp; Wellness</div>
-            <div class="area-option" data-area="love">💕 Love &amp; Relationships</div>
-            <div class="area-option" data-area="finance">💰 Finance &amp; Prosperity</div>
-            <div class="area-option" data-area="purpose">✨ Purpose &amp; Spirituality</div>
+            <div class="area-option" data-area="health">🌿 Salud y Bienestar</div>
+            <div class="area-option" data-area="love">💕 Amor y Relaciones</div>
+            <div class="area-option" data-area="finance">💰 Finanzas y Prosperidad</div>
+            <div class="area-option" data-area="purpose">✨ Propósito y Espiritualidad</div>
           </div>
-          <button class="quiz-btn" id="btn-step2">Continue</button>
+          <button class="quiz-btn" id="btn-step2">Continuar</button>
         </div>
-
-        <!-- Step 3: Name -->
+        <!-- Paso 3: Nombre -->
         <div class="step fade-in" id="step-3">
-          <h2 class="quiz-title">What should we call you?</h2>
-          <p class="quiz-sub">Your Angel knows you by your name</p>
-          <input id="name-input" class="quiz-input" type="text" placeholder="Your first name" />
-          <p class="secure-note">🔒 Secure and private data</p>
-          <button class="reveal-btn" id="btn-step3">✨ Reveal my Angel</button>
+          <h2 class="quiz-title">¿Cómo debemos llamarte?</h2>
+          <p class="quiz-sub">Tu Ángel te conoce por tu nombre</p>
+          <input id="name-input" class="quiz-input" type="text" placeholder="Tu nombre" />
+          <p class="secure-note">🔒 Datos seguros y privados</p>
+          <button class="reveal-btn" id="btn-step3">✨ Revelar mi Ángel</button>
         </div>
-
-        <!-- Step 4: Loading -->
+        <!-- Paso 4: Cargando -->
         <div class="step fade-in" id="step-4">
-          <h2 class="quiz-title">Connecting with your Guardian Angel…</h2>
-          <p class="quiz-sub">Please wait while we find your celestial guide</p>
+          <h2 class="quiz-title">Conectando con tu Ángel Guardián…</h2>
+          <p class="quiz-sub">Por favor espera mientras encontramos tu guía celestial</p>
           <div class="loader-ring"></div>
-          <p class="loader-text" id="loader-text">Analyzing your birth date…</p>
+          <p class="loader-text" id="loader-text">Analizando tu fecha de nacimiento…</p>
         </div>
-
       </div><!-- /.quiz-card -->
     </div>
   </div>
-
   <!-- ══════════════════════════════
-       SCREEN 3 — Result
+       PANTALLA 3 — Resultado
   ══════════════════════════════ -->
   <div id="screen-result">
-    <!-- top blue band -->
+    <!-- banda azul superior -->
     <div class="result-top">
       <div class="result-stars">✦ ✦ ✦</div>
-      <p class="result-greeting">🎉 <span id="result-name">be</span>, <span class="result-angel-name" id="result-angel-name-top">Archangel Gabriel</span> has just revealed himself to you!</p>
-      <div class="result-proof">⭐ Already protected and guided over 134,521 people in 26 countries</div>
+      <p class="result-greeting">🎉 <span id="result-name">be</span>, ¡<span class="result-angel-name" id="result-angel-name-top">Arcángel Gabriel</span> acaba de revelarse ante ti!</p>
+      <div class="result-proof">⭐ Ya protegió y guió a más de 134.521 personas en 26 países</div>
     </div>
-
-    <!-- angel card -->
+    <!-- tarjeta del ángel -->
     <div class="result-card">
       <div class="angel-medallion">
-        <img src="Design sem nome.png" alt="Archangel Gabriel" id="result-emoji" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
-        <div class="angel-medallion-label" id="result-label">ARCHANGEL GABRIEL</div>
+        <img src="Design sem nome.png" alt="Arcángel Gabriel" id="result-emoji" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+        <div class="angel-medallion-label" id="result-label">ARCÁNGEL GABRIEL</div>
       </div>
-      <h2 class="angel-card-name" id="result-card-name">Archangel Gabriel</h2>
-      <div class="angel-role-box" id="result-role">Your Guardian Angel</div>
+      <h2 class="angel-card-name" id="result-card-name">Arcángel Gabriel</h2>
+      <div class="angel-role-box" id="result-role">Tu Ángel Guardián</div>
       <p class="angel-description" id="result-desc"></p>
-      <button class="continue-btn" id="btn-to-benefits">Continue »</button>
+      <button class="continue-btn" id="btn-to-benefits">Continuar »</button>
     </div>
   </div>
-
   <!-- ══════════════════════════════
-       SCREEN 4 — Benefits
+       PANTALLA 4 — Beneficios
   ══════════════════════════════ -->
   <div id="screen-benefits">
     <div class="what-section">
       <div class="what-inner">
         <div class="what-icon">🕊️</div>
-        <h3 class="what-title">What Gabriel does for<br>you now</h3>
+        <h3 class="what-title">Lo que Gabriel hace por<br>ti ahora</h3>
         <div class="what-divider"></div>
         <div class="what-cards" id="what-cards"></div>
-        <button class="continue-btn" id="btn-continue-2">Continue »</button>
+        <button class="continue-btn" id="btn-continue-2">Continuar »</button>
       </div>
     </div>
   </div>
-
   <style>
     .result-stars {
       font-size: 18px;
       color: #f5a623;
       letter-spacing: 8px;
     }
-
     #screen-benefits {
       display: none;
       background: #f5f0e8;
@@ -600,7 +565,6 @@
     }
     #screen-benefits.active { display: block; }
     #screen-benefits.active { display: block; }
-
     .what-section {
       background: #f5f0e8;
       padding: 0 20px 60px;
@@ -683,7 +647,6 @@
       background: #fdf6ee;
     }
     #screen-result.active { display: flex; }
-
     .result-top {
       background: linear-gradient(170deg, #1e3580 0%, #2d55b8 60%, #1e3d96 100%);
       padding: 40px 28px 36px;
@@ -712,8 +675,7 @@
       color: #fff;
       max-width: 400px;
     }
-
-    /* angel card */
+    /* tarjeta del ángel */
     .result-card {
       background: #fdf6ee;
       display: flex;
@@ -750,7 +712,6 @@
       margin-top: 4px;
       text-transform: uppercase;
     }
-
     .angel-card-name {
       font-family: 'Playfair Display', serif;
       font-size: clamp(26px, 4vw, 40px);
@@ -796,9 +757,8 @@
     }
     .continue-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(232,160,0,0.5); }
     .continue-btn:active { transform: scale(0.98); }
-
     /* ══════════════════════════════
-       SCREEN 5 — Video
+       PANTALLA 5 — Video
     ══════════════════════════════ */
     #screen-video {
       display: none;
@@ -809,7 +769,6 @@
       padding: 40px 20px 60px;
     }
     #screen-video.active { display: flex; }
-
     .video-wrap {
       width: 100%;
       max-width: 480px;
@@ -817,7 +776,6 @@
       flex-direction: column;
       align-items: center;
     }
-
     .video-header-card {
       width: 100%;
       background: linear-gradient(160deg, #1e2d6e 0%, #2a3f8f 100%);
@@ -846,7 +804,6 @@
       color: rgba(255,255,255,0.75);
       line-height: 1.4;
     }
-
     .video-player-area {
       width: 100%;
       background: #1a3070;
@@ -857,14 +814,12 @@
       align-items: center;
       gap: 20px;
     }
-
     .video-player-area vturb-smartplayer {
       display: block;
       width: 100%;
       border-radius: 10px;
       overflow: hidden;
     }
-
     .video-tagline {
       font-size: clamp(14px, 2vw, 16px);
       color: rgba(255,255,255,0.85);
@@ -874,21 +829,18 @@
       max-width: 360px;
     }
   </style>
-
   <!-- ══════════════════════════════
-       SCREEN 5 — Video
+       PANTALLA 5 — Video
   ══════════════════════════════ -->
   <div id="screen-video">
     <div class="video-wrap">
-
       <div class="video-header-card">
         <div class="video-header-icon">🔥</div>
         <div class="video-header-text">
-          <h2>Urgent Message from<br>Archangel Gabriel</h2>
-          <p>Your first personalized blessing</p>
+          <h2>Mensaje Urgente del<br>Arcángel Gabriel</h2>
+          <p>Tu primera bendición personalizada</p>
         </div>
       </div>
-
       <div class="video-player-area">
         <div id="ifr_69c2dfafbaa02a41bc514ff3_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
           <div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_69c2dfafbaa02a41bc514ff3_aspect">
@@ -899,68 +851,64 @@
             </iframe>
           </div>
         </div>
-        <p class="video-tagline">🙏 Your spiritual journey is just beginning</p>
+        <p class="video-tagline">🙏 Tu viaje espiritual apenas comienza</p>
       </div>
-
     </div>
   </div>
-
-  <!-- Vturb iframe player script -->
+  <!-- Script del reproductor Vturb -->
   <script type="text/javascript">
     var s=document.createElement("script");
     s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js",
     s.async=!0,document.head.appendChild(s);
   </script>
-
   <script>
-    /* ── Angel data — always Gabriel, text personalized per area ── */
+    /* ── Datos del ángel — siempre Gabriel, texto personalizado por área ── */
     var gabrielMessages = {
       health:  {
-        role: 'Your Guardian Angel of Healing & Renewal',
-        desc: 'Gabriel has been watching over your body and your energy. He wants you to know: the fatigue, the tension, the weight you carry — none of it is permanent. His light is already working within you, restoring what was lost and awakening a deep, quiet strength you forgot you had.'
+        role: 'Tu Ángel Guardián de la Sanación y la Renovación',
+        desc: 'Gabriel ha estado velando por tu cuerpo y tu energía. Quiere que sepas: el cansancio, la tensión, el peso que cargas — nada de eso es permanente. Su luz ya está trabajando dentro de ti, restaurando lo que se perdió y despertando una fuerza profunda y silenciosa que habías olvidado que tenías.'
       },
       love: {
-        role: 'Your Guardian Angel of Love & Connection',
-        desc: 'Gabriel sees the love you carry inside — and the love you still hope to receive. He has a message for you: you are not meant to walk this path alone. The connections your heart longs for are closer than you think. He is already clearing the way.'
+        role: 'Tu Ángel Guardián del Amor y la Conexión',
+        desc: 'Gabriel ve el amor que llevas dentro — y el amor que aún esperas recibir. Tiene un mensaje para ti: no estás destinado/a a caminar este camino solo/a. Las conexiones que tu corazón anhela están más cerca de lo que crees. Él ya está despejando el camino.'
       },
       finance: {
-        role: 'Your Guardian Angel of Abundance & New Paths',
-        desc: 'Gabriel has seen your efforts, your worries, and your silent prayers about provision. He brings clarity: the path to abundance is opening. What felt blocked is beginning to move. He asks you to trust the next step — even when you can\'t see the full staircase.'
+        role: 'Tu Ángel Guardián de la Abundancia y los Nuevos Caminos',
+        desc: 'Gabriel ha visto tus esfuerzos, tus preocupaciones y tus oraciones silenciosas por la provisión. Trae claridad: el camino hacia la abundancia se está abriendo. Lo que parecía bloqueado está comenzando a moverse. Te pide que confíes en el próximo paso — incluso cuando no puedes ver toda la escalera.'
       },
       purpose: {
-        role: 'Your Guardian Angel of Purpose & Divine Clarity',
-        desc: 'Gabriel is the angel of divine messages — and yours is ready. He has been waiting for you to be still enough to receive it. Your purpose is not hidden from you. It has always been there, whispering. He is here to make it impossible to ignore.'
+        role: 'Tu Ángel Guardián del Propósito y la Claridad Divina',
+        desc: 'Gabriel es el ángel de los mensajes divinos — y el tuyo está listo. Ha estado esperando que estuvieras lo suficientemente tranquilo/a para recibirlo. Tu propósito no está oculto para ti. Siempre ha estado ahí, susurrando. Él está aquí para hacerlo imposible de ignorar.'
       },
       'health+love': {
-        role: 'Your Guardian Angel of Healing & Love',
-        desc: 'Gabriel carries two gifts for you today: healing and love. He sees how deeply connected these are in your life — how your body holds what your heart has been through. His message is gentle but clear: as you heal, you open. As you open, love finds its way in.'
+        role: 'Tu Ángel Guardián de la Sanación y el Amor',
+        desc: 'Gabriel trae dos regalos para ti hoy: sanación y amor. Ve lo profundamente conectados que están en tu vida — cómo tu cuerpo guarda lo que tu corazón ha vivido. Su mensaje es suave pero claro: mientras sanas, te abres. Y mientras te abres, el amor encuentra su camino.'
       },
       'health+finance': {
-        role: 'Your Guardian Angel of Renewal & Provision',
-        desc: 'Gabriel sees the weight you carry between your health and your finances — and he wants you to know they are not separate battles. As your energy is restored, your capacity to create and receive expands with it. He is working on both at once.'
+        role: 'Tu Ángel Guardián de la Renovación y la Provisión',
+        desc: 'Gabriel ve el peso que cargas entre tu salud y tus finanzas — y quiere que sepas que no son batallas separadas. A medida que tu energía se restaura, tu capacidad de crear y recibir se expande con ella. Él está trabajando en ambas al mismo tiempo.'
       },
       'health+purpose': {
-        role: 'Your Guardian Angel of Vitality & Purpose',
-        desc: 'Gabriel brings you a powerful message: your purpose requires your wholeness. He has been watching you pour from an empty cup. The path ahead is real and it is yours — but first, he is restoring your foundation so you can walk it fully.'
+        role: 'Tu Ángel Guardián de la Vitalidad y el Propósito',
+        desc: 'Gabriel te trae un mensaje poderoso: tu propósito requiere tu integridad. Ha estado viéndote dar de un vaso vacío. El camino que te espera es real y es tuyo — pero primero, él está restaurando tu base para que puedas recorrerlo por completo.'
       },
       'finance+love': {
-        role: 'Your Guardian Angel of Love & Abundance',
-        desc: 'Gabriel carries a message about the two things you desire most: love and security. He wants you to know — they are not in conflict. Abundance flows more freely when the heart is at peace. He is working to align both in your life, simultaneously.'
+        role: 'Tu Ángel Guardián del Amor y la Abundancia',
+        desc: 'Gabriel lleva un mensaje sobre las dos cosas que más deseas: amor y seguridad. Quiere que sepas que no están en conflicto. La abundancia fluye con más libertad cuando el corazón está en paz. Está trabajando para alinear ambas en tu vida, simultáneamente.'
       },
       'love+purpose': {
-        role: 'Your Guardian Angel of Love & Sacred Path',
-        desc: 'Gabriel sees your heart — full of love to give, and a deep longing to live with meaning. His message: these two are your greatest gifts, and they belong together. The love you seek and the purpose you carry are two threads of the same divine design.'
+        role: 'Tu Ángel Guardián del Amor y el Camino Sagrado',
+        desc: 'Gabriel ve tu corazón — lleno de amor para dar y un profundo anhelo de vivir con significado. Su mensaje: estos dos son tus mayores dones y pertenecen juntos. El amor que buscas y el propósito que llevas son dos hilos del mismo diseño divino.'
       },
       'finance+purpose': {
-        role: 'Your Guardian Angel of Purpose & Prosperity',
-        desc: 'Gabriel brings clarity on something you\'ve felt for a long time: your purpose and your prosperity are meant to be aligned. You were not meant to choose between doing what matters and living well. He is opening a path where both are possible — together.'
+        role: 'Tu Ángel Guardián del Propósito y la Prosperidad',
+        desc: 'Gabriel trae claridad sobre algo que has sentido por mucho tiempo: tu propósito y tu prosperidad están destinados a estar alineados. No estás destinado/a a elegir entre hacer lo que importa y vivir bien. Él está abriendo un camino donde ambos son posibles — juntos.'
       },
       'all': {
-        role: 'Your Guardian Angel of Complete Transformation',
-        desc: 'Gabriel rarely comes with a message this complete. He sees every area of your life — your health, your heart, your finances, your purpose — and he has something to say about all of them. This is not a coincidence. You are at the beginning of a profound shift, and he is here to guide every step.'
+        role: 'Tu Ángel Guardián de la Transformación Completa',
+        desc: 'Gabriel raramente llega con un mensaje tan completo. Él ve cada área de tu vida — tu salud, tu corazón, tus finanzas, tu propósito — y tiene algo que decir sobre todas ellas. Esto no es una coincidencia. Estás al comienzo de un cambio profundo, y él está aquí para guiar cada paso.'
       }
     };
-
     function getGabrielMessage(areas) {
       if (areas.length === 0) return gabrielMessages['purpose'];
       if (areas.length >= 4) return gabrielMessages['all'];
@@ -968,33 +916,28 @@
       var key = areas.slice().sort().join('+');
       return gabrielMessages[key] || gabrielMessages[areas[0]];
     }
-
     var stepMeta = [
       null,
-      { label: 'Step 1 of 3', pct: 33 },
-      { label: 'Step 2 of 3', pct: 67 },
-      { label: 'Step 3 of 3', pct: 100 },
-      { label: 'Step 3 of 3', pct: 100 },
+      { label: 'Paso 1 de 3', pct: 33 },
+      { label: 'Paso 2 de 3', pct: 67 },
+      { label: 'Paso 3 de 3', pct: 100 },
+      { label: 'Paso 3 de 3', pct: 100 },
     ];
-
     var loaderMsgs = [
-      'Analyzing your birth date…',
-      'Consulting the celestial archive…',
-      'Identifying your Guardian Angel…',
-      'Preparing your personal message…',
+      'Analizando tu fecha de nacimiento…',
+      'Consultando el archivo celestial…',
+      'Identificando a tu Ángel Guardián…',
+      'Preparando tu mensaje personal…',
     ];
-
-    /* ── Go to quiz ── */
+    /* ── Ir al quiz ── */
     document.getElementById('btn-start').addEventListener('click', function () {
       document.getElementById('screen-landing').style.display = 'none';
       document.getElementById('screen-quiz').classList.add('active');
       window.scrollTo(0, 0);
     });
-
-    /* ── Date mask + button activation ── */
+    /* ── Máscara de fecha + activación de botón ── */
     var dateInput = document.getElementById('date-input');
     var btn1 = document.getElementById('btn-step1');
-
     dateInput.addEventListener('input', function () {
       var v = this.value.replace(/\D/g, '').substring(0, 8);
       if (v.length >= 5) v = v.slice(0,2) + '/' + v.slice(2,4) + '/' + v.slice(4);
@@ -1009,8 +952,7 @@
         this.style.borderColor = '#ddd';
       }
     });
-
-    /* ── Step 1 → 2 ── */
+    /* ── Paso 1 → 2 ── */
     btn1.addEventListener('click', function () {
       if (dateInput.value.length < 10) {
         document.getElementById('date-hint').style.color = '#e05c00';
@@ -1019,11 +961,9 @@
       }
       goToStep(2);
     });
-
-    /* ── Area multi-select — collect all selected ── */
+    /* ── Selección múltiple de área ── */
     var selectedAreas = [];
     var userName = '';
-
     document.querySelectorAll('.area-option').forEach(function (opt) {
       opt.addEventListener('click', function () {
         this.classList.toggle('selected');
@@ -1034,8 +974,7 @@
         document.getElementById('btn-step2').classList.toggle('ready', selectedAreas.length > 0);
       });
     });
-
-    /* ── Step 2 → 3 ── */
+    /* ── Paso 2 → 3 ── */
     document.getElementById('btn-step2').addEventListener('click', function () {
       if (document.querySelectorAll('.area-option.selected').length === 0) {
         document.querySelectorAll('.area-option').forEach(function (o) {
@@ -1046,8 +985,7 @@
       }
       goToStep(3);
     });
-
-    /* ── Step 3 → 4 (loader) ── */
+    /* ── Paso 3 → 4 (loader) ── */
     document.getElementById('btn-step3').addEventListener('click', function () {
       var v = document.getElementById('name-input').value.trim();
       if (!v) { document.getElementById('name-input').style.borderColor = '#e05c00'; return; }
@@ -1055,7 +993,6 @@
       goToStep(4);
       runLoader();
     });
-
     function goToStep(n) {
       document.querySelectorAll('.step').forEach(function (s) { s.classList.remove('active'); });
       document.getElementById('step-' + n).classList.add('active');
@@ -1064,7 +1001,6 @@
       document.getElementById('progress-fill').style.width = stepMeta[n].pct + '%';
       window.scrollTo(0, 0);
     }
-
     function runLoader() {
       var i = 0;
       var el = document.getElementById('loader-text');
@@ -1075,53 +1011,46 @@
           setTimeout(function () { el.textContent = loaderMsgs[i]; el.style.opacity = '1'; }, 350);
         } else {
           clearInterval(iv);
-          /* after loader → show result */
+          /* após o loader → mostrar resultado */
           setTimeout(showResult, 600);
         }
       }, 1800);
     }
-
-    /* ── Benefit cards data ── */
+    /* ── Dados dos cards de benefícios ── */
     var benefitData = {
       health: {
-        title: '🌿 Health and Wellness',
-        items: ['Strengthens your vital energy and immunity', 'Accelerates healing and recovery processes', 'Protects against negative energies that cause illness']
+        title: '🌿 Salud y Bienestar',
+        items: ['Fortalece tu energía vital y tu inmunidad', 'Acelera los procesos de sanación y recuperación', 'Protege contra las energías negativas que causan enfermedades']
       },
       love: {
-        title: '💕 Love and Relationships',
-        items: ['Attracts harmonious and true relationships', 'Heals emotional wounds from the past', 'Awakens self-love and self-esteem']
+        title: '💕 Amor y Relaciones',
+        items: ['Atrae relaciones armoniosas y verdaderas', 'Sana las heridas emocionales del pasado', 'Despierta el amor propio y la autoestima']
       },
       finance: {
-        title: '💰 Finance and Prosperity',
-        items: ['Opens paths to new opportunities', 'Removes ancestral financial blockages', 'Attracts lasting abundance and prosperity']
+        title: '💰 Finanzas y Prosperidad',
+        items: ['Abre caminos hacia nuevas oportunidades', 'Elimina los bloqueos financieros ancestrales', 'Atrae abundancia duradera y prosperidad']
       },
       purpose: {
-        title: '✨ Purpose and Spirituality',
-        items: ['Reveals your life mission with clarity', 'Connects you with your divine essence', 'Awakens your spiritual gifts and talents']
+        title: '✨ Propósito y Espiritualidad',
+        items: ['Revela tu misión de vida con claridad', 'Te conecta con tu esencia divina', 'Despierta tus dones y talentos espirituales']
       }
     };
-
-    /* all areas in default order for fallback */
+    /* todas las áreas en orden predeterminado */
     var allAreas = ['health', 'love', 'finance', 'purpose'];
-
     function showResult() {
       var msg = getGabrielMessage(selectedAreas);
-
-      /* populate top section */
+      /* rellenar sección superior */
       document.getElementById('result-name').textContent = userName;
-      document.getElementById('result-angel-name-top').textContent = 'Archangel Gabriel';
-      // angel image is static, no need to set emoji
-      document.getElementById('result-label').textContent = 'ARCHANGEL GABRIEL';
-      document.getElementById('result-card-name').textContent = 'Archangel Gabriel';
+      document.getElementById('result-angel-name-top').textContent = 'Arcángel Gabriel';
+      document.getElementById('result-label').textContent = 'ARCÁNGEL GABRIEL';
+      document.getElementById('result-card-name').textContent = 'Arcángel Gabriel';
       document.getElementById('result-role').textContent = msg.role;
       document.getElementById('result-desc').textContent = msg.desc;
-
-      /* build benefit cards: selected areas first, then remaining */
+      /* construir tarjetas de beneficios: áreas seleccionadas primero */
       var ordered = selectedAreas.slice();
       allAreas.forEach(function(a) {
         if (ordered.indexOf(a) === -1) ordered.push(a);
       });
-
       var cardsHTML = '';
       ordered.forEach(function(area) {
         var b = benefitData[area];
@@ -1132,20 +1061,17 @@
           '</div>';
       });
       document.getElementById('what-cards').innerHTML = cardsHTML;
-
-      /* switch screens */
+      /* cambiar pantallas */
       document.getElementById('screen-quiz').classList.remove('active');
       document.getElementById('screen-result').classList.add('active');
       window.scrollTo(0, 0);
-
-      /* continue → benefits screen */
+      /* continuar → pantalla de beneficios */
       document.getElementById('btn-to-benefits').addEventListener('click', function () {
         document.getElementById('screen-result').classList.remove('active');
         document.getElementById('screen-benefits').classList.add('active');
         window.scrollTo(0, 0);
       });
-
-      /* continue from benefits → video */
+      /* continuar desde beneficios → video */
       document.getElementById('btn-continue-2').addEventListener('click', function () {
         document.getElementById('screen-benefits').classList.remove('active');
         document.getElementById('screen-video').classList.add('active');
@@ -1153,6 +1079,5 @@
       });
     }
   </script>
-
 </body>
 </html>
