@@ -1014,10 +1014,8 @@
       this.value = v;
       if (v.length === 10) {
         btn1.classList.add('ready');
-        document.getElementById('date-hint').style.color = '
-#f5a623';
-        this.style.borderColor = '
-#f5a623';
+        document.getElementById('date-hint').style.color = '#f5a623';
+        this.style.borderColor = '#f5a623';
       } else {
         btn1.classList.remove('ready');
         this.style.borderColor = '#ddd';
@@ -1026,10 +1024,8 @@
     /* ── Step 1 → 2 ── */
     btn1.addEventListener('click', function () {
       if (dateInput.value.length < 10) {
-        document.getElementById('date-hint').style.color = '
-#e05c00';
-        dateInput.style.borderColor = '
-#e05c00';
+        document.getElementById('date-hint').style.color = '#e05c00';
+        dateInput.style.borderColor = '#e05c00';
         return;
       }
       goToStep(2);
@@ -1051,8 +1047,7 @@
     document.getElementById('btn-step2').addEventListener('click', function () {
       if (document.querySelectorAll('.area-option.selected').length === 0) {
         document.querySelectorAll('.area-option').forEach(function (o) {
-          o.style.borderColor = '
-#e05c00';
+          o.style.borderColor = '#e05c00';
           setTimeout(function () { o.style.borderColor = '#ddd'; }, 1200);
         });
         return;
@@ -1062,8 +1057,7 @@
     /* ── Step 3 → 4 (loader) ── */
     document.getElementById('btn-step3').addEventListener('click', function () {
       var v = document.getElementById('name-input').value.trim();
-      if (!v) { document.getElementById('name-input').style.borderColor = '
-#e05c00'; return; }
+      if (!v) { document.getElementById('name-input').style.borderColor = '#e05c00'; return; }
       userName = v;
       goToStep(4);
       runLoader();
